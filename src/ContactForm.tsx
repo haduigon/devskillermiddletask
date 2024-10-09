@@ -43,6 +43,7 @@ const ContactForm: React.FC<Props> = () => {
 
             <label className="flex mt-2 justify-left items-center mt-40">
               <input
+                value="name"
                 type="text"
                 className="border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
@@ -51,6 +52,7 @@ const ContactForm: React.FC<Props> = () => {
 
             <label className="flex mt-2 justify-left items-center">
               <input
+                value="email"
                 type="email"
                 className="border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
@@ -58,13 +60,17 @@ const ContactForm: React.FC<Props> = () => {
             </label>
 
             <label className="flex mt-2 justify-left items-center">
-              <textarea className="border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              <textarea
+                className="border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                value="message"
+              />
               <p className="ml-2">Input your message</p>
             </label>
 
             <div className="flex">
               <label className="flex mt-2 justify-left items-center">
                 <input
+                  value="radio"
                   name='radio'
                   type="radio"
                   className="border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -74,6 +80,7 @@ const ContactForm: React.FC<Props> = () => {
 
               <label className="flex mt-2 justify-left items-center ml-2">
                 <input
+                  value="radio"
                   name='radio'
                   type="radio"
                   className="border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -83,6 +90,7 @@ const ContactForm: React.FC<Props> = () => {
 
               <label className="flex mt-2 justify-left items-center ml-2">
                 <input
+                  value="radio"
                   name='radio'
                   type="radio"
                   className="border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -93,7 +101,7 @@ const ContactForm: React.FC<Props> = () => {
             </div>
 
             <select className="mt-2">
-              <option className="text-left">Please select</option>
+              <option className="text-left" value="option">Please select</option>
               {selectProps.map((prop) => (
                 <option key={prop.id} value={prop.id} className="text-left">
                   {prop.label}
@@ -102,7 +110,8 @@ const ContactForm: React.FC<Props> = () => {
             </select>
 
             <label className="flex mt-2 justify-left items-center">
-                <input
+              <input
+                value="checkbox"
                   type="checkbox"
                   className="border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
